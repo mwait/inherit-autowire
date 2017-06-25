@@ -1,9 +1,9 @@
 package com.wait.inheritautowire.domain;
 
 public class Person {
-    private String name;
-    private String lastName;
-    private int age;
+    private final String name;
+    private final String lastName;
+    private final int age;
 
     public Person(PersonBuilder pb) {
         this.name = pb.name;
@@ -17,26 +17,14 @@ public class Person {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getLastName() {
         return lastName;
-    }
-
-    public void setLastname(String lastName) {
-        this.lastName = lastName;
     }
 
     public int getAge() {
         return age;
     }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
+    
     @Override
     public String toString() {
         return "Person{" +
